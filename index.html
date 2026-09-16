@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cents — Support</title>
+<meta name="description" content="Support and privacy information for Cents, an offline-first finance tracker for iPhone.">
+<style>
+  :root {
+    --bg: #FBFBFD;
+    --surface: #FFFFFF;
+    --text: #1C1C1E;
+    --muted: #636366;
+    --line: #E5E5EA;
+    --brand: #0072B2;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #111113;
+      --surface: #1C1C1E;
+      --text: #F2F2F7;
+      --muted: #AEAEB2;
+      --line: #2C2C2E;
+      --brand: #56B4E9;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 48px 16px 96px;
+    background: var(--bg);
+    color: var(--text);
+    font: 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    -webkit-text-size-adjust: 100%;
+  }
+  main { max-width: 680px; margin: 0 auto; }
+  .mark {
+    display: flex; align-items: center; gap: 12px;
+    margin-bottom: 40px; text-decoration: none; color: inherit;
+  }
+  .mark span:first-child {
+    display: grid; place-items: center;
+    width: 44px; height: 44px; border-radius: 10px;
+    background: var(--brand); color: #fff;
+    font-size: 26px; font-weight: 600; line-height: 1;
+  }
+  .mark span:last-child { font-size: 20px; font-weight: 600; letter-spacing: -0.01em; }
+  h1 { font-size: 32px; line-height: 1.2; letter-spacing: -0.02em; margin: 0 0 8px; }
+  h2 { font-size: 21px; margin: 40px 0 8px; letter-spacing: -0.01em; }
+  p, li { color: var(--text); }
+  ul { padding-left: 22px; }
+  li { margin: 8px 0; }
+  code {
+    background: var(--surface); border: 1px solid var(--line);
+    border-radius: 5px; padding: 1px 5px; font-size: 0.9em;
+  }
+  a { color: var(--brand); }
+  footer {
+    margin-top: 64px; padding-top: 24px;
+    border-top: 1px solid var(--line);
+    color: var(--muted); font-size: 15px;
+  }
+  footer a { margin-right: 16px; }
+</style>
+</head>
+<body>
+<main>
+<a class="mark" href="./"><span>¢</span><span>Cents</span></a>
+
+<h1>Cents</h1>
+<p>An offline-first personal finance tracker for iPhone. Your records live on your device, in a database only you can read. There is no account, no server, and nothing to sign up for.</p>
+
+<h2>Support</h2>
+<p>Email <a href="mailto:aaabolfadl@gmail.com">aaabolfadl@gmail.com</a> with anything at all — a bug, a question, a feature you miss. Include your iOS version and what you were doing when something went wrong, and you will get a reply.</p>
+
+<h2>Your data</h2>
+<p>Cents does not collect your data. It has no analytics, no trackers, and no advertising identifier. The only outbound request it ever makes is for exchange rates, and that request contains a currency code and nothing else. You can turn it off entirely and enter rates by hand.</p>
+<p>Because everything lives on your device, <strong>keeping a backup is on you.</strong> Settings &rarr; Backup writes a file you can store wherever you like.</p>
+
+<h2>Donations</h2>
+<p>Every feature of Cents is free, for everyone, forever. Donations unlock nothing — they are a thank you, and half of every one is passed on to charity.</p>
+
+<h2>Documents</h2>
+<ul>
+<li><a href="./privacy.html">Privacy Policy</a></li>
+<li><a href="./terms.html">Terms of Use</a></li>
+</ul>
+
+<footer>
+<a href="./">Support</a><a href="./privacy.html">Privacy</a><a href="./terms.html">Terms</a>
+<p>Cents is made by Ahmed Abolfadl. Questions: <a href="mailto:aaabolfadl@gmail.com">aaabolfadl@gmail.com</a></p>
+</footer>
+</main>
+</body>
+</html>
