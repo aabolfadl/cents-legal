@@ -1,1 +1,110 @@
 
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cents — Privacy Policy</title>
+<meta name="description" content="The Cents privacy policy. Cents does not collect your data.">
+<style>
+  :root {
+    --bg: #FBFBFD;
+    --surface: #FFFFFF;
+    --text: #1C1C1E;
+    --muted: #636366;
+    --line: #E5E5EA;
+    --brand: #0072B2;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #111113;
+      --surface: #1C1C1E;
+      --text: #F2F2F7;
+      --muted: #AEAEB2;
+      --line: #2C2C2E;
+      --brand: #56B4E9;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 48px 16px 96px;
+    background: var(--bg);
+    color: var(--text);
+    font: 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    -webkit-text-size-adjust: 100%;
+  }
+  main { max-width: 680px; margin: 0 auto; }
+  .mark {
+    display: flex; align-items: center; gap: 12px;
+    margin-bottom: 40px; text-decoration: none; color: inherit;
+  }
+  .mark span:first-child {
+    display: grid; place-items: center;
+    width: 44px; height: 44px; border-radius: 10px;
+    background: var(--brand); color: #fff;
+    font-size: 26px; font-weight: 600; line-height: 1;
+  }
+  .mark span:last-child { font-size: 20px; font-weight: 600; letter-spacing: -0.01em; }
+  h1 { font-size: 32px; line-height: 1.2; letter-spacing: -0.02em; margin: 0 0 8px; }
+  h2 { font-size: 21px; margin: 40px 0 8px; letter-spacing: -0.01em; }
+  p, li { color: var(--text); }
+  ul { padding-left: 22px; }
+  li { margin: 8px 0; }
+  code {
+    background: var(--surface); border: 1px solid var(--line);
+    border-radius: 5px; padding: 1px 5px; font-size: 0.9em;
+  }
+  a { color: var(--brand); }
+  footer {
+    margin-top: 64px; padding-top: 24px;
+    border-top: 1px solid var(--line);
+    color: var(--muted); font-size: 15px;
+  }
+  footer a { margin-right: 16px; }
+</style>
+</head>
+<body>
+<main>
+<a class="mark" href="./"><span>¢</span><span>Cents</span></a>
+<h1>Privacy Policy</h1>
+<p><strong>Version 2026-09-02</strong></p>
+<p>Cents does not collect your data. There is no account, no server, and nothing to sign up for. This policy explains what that means in practice.</p>
+<h2>Where your data lives</h2>
+<p>Everything you record in Cents — transactions, wallets, categories, budgets, debts, notes — is stored in a database file on your iPhone. It is never uploaded, never synchronised, and never seen by the developer or anyone else.</p>
+<p>Because your data lives only on your device, <strong>you are responsible for keeping a copy of it.</strong> Cents includes a Backup feature for exactly this reason. Your data may also be included in your own encrypted iPhone backup, which only you control.</p>
+<h2>The only two network calls</h2>
+<p>Cents makes exactly two kinds of network request, and nothing else:</p>
+<ul>
+<li><strong>Exchange rates.</strong> When you hold money in more than one currency, Cents asks a public exchange-rate service for today's rates. The request contains one thing: a currency code, such as <code>EGP</code>. It does not contain your balances, your transactions, your device identifier, or anything else about you. You can turn automatic rate updates off entirely in Settings and enter rates by hand.</li>
+<li><strong>Donations.</strong> If you choose to make a donation, the purchase is handled by Apple's In-App Purchase system. Cents never sees your payment details.</li>
+</ul>
+<p>There are no other requests. No crash reporting, no remote configuration, no feature flags, no update checks.</p>
+<h2>What Cents does not do</h2>
+<ul>
+<li><strong>No analytics.</strong> Cents does not measure what you tap, how long you use it, or what you record.</li>
+<li><strong>No advertising and no trackers.</strong> There are no third-party SDKs of any kind for advertising, attribution or profiling.</li>
+<li><strong>No identifiers.</strong> Cents does not create or transmit a user id, a device id, or an advertising identifier.</li>
+</ul>
+<p>The App Store privacy questionnaire for Cents is answered as <strong>Data Not Collected</strong>, because that is accurate.</p>
+<h2>Notifications</h2>
+<p>Reminders about recurring transactions, upcoming debt payments and budget thresholds are scheduled and delivered <strong>locally, by your device</strong>. Cents does not use push notifications and holds no push token. Nothing about a reminder leaves your phone.</p>
+<h2>Donations</h2>
+<p>Donations are processed by Apple, not by the developer. Apple handles the payment and provides the developer with anonymous sales reports only — no name, no email address, no payment details, and no way to connect a donation to a person.</p>
+<p>Donations are a thank-you. They do not unlock features: every feature of Cents is free, for everyone, forever.</p>
+<h2>App Lock</h2>
+<p>If you turn App Lock on, Cents requires Face ID, Touch ID or your device passcode before showing your records.</p>
+<p><strong>Be clear about what this protects.</strong> App Lock hides the app's screens. It does not add encryption of its own. Your data is protected at rest by iOS device encryption, which applies whenever your iPhone is locked with a passcode. Anyone who can unlock your iPhone and knows your passcode can reach your data.</p>
+<h2>Children</h2>
+<p>Cents is not directed at children and collects nothing from anyone, of any age.</p>
+<h2>Changes to this policy</h2>
+<p>If this policy changes materially, Cents will ask you to read and accept the new version before you continue using the app. The version you accepted is recorded on your device.</p>
+<h2>Contact</h2>
+<p>Questions about privacy can go to ${PRIVACY_CONTACT}. Because there is no account and no data held about you, there is nothing for the developer to look up, correct or delete on your behalf — deleting the app, or using <strong>Erase all data</strong> in Settings, removes everything.</p>
+<footer>
+<a href="./">Support</a><a href="./privacy.html">Privacy</a><a href="./terms.html">Terms</a>
+<p>Cents is made by Ahmed Abolfadl. Questions: <a href="mailto:ahmedamrabolfadl1@gmail.com">ahmedamrabolfadl1@gmail.com</a></p>
+</footer>
+</main>
+</body>
+</html>
