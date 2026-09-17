@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -68,10 +67,10 @@
 <main>
 <a class="mark" href="./"><span>¢</span><span>Cents</span></a>
 <h1>Privacy Policy</h1>
-<p><strong>Version 2026-09-02</strong></p>
+<p><strong>Version 2026-09-17</strong></p>
 <p>Cents does not collect your data. There is no account, no server, and nothing to sign up for. This policy explains what that means in practice.</p>
 <h2>Where your data lives</h2>
-<p>Everything you record in Cents — transactions, wallets, categories, budgets, debts, notes — is stored in a database file on your iPhone. It is never uploaded, never synchronised, and never seen by the developer or anyone else.</p>
+<p>Everything you record in Cents — transactions, wallets, categories, budgets, debts, notes, and your vendor category list — is stored in a database file on your iPhone. It is never uploaded, never synchronised, and never seen by the developer or anyone else.</p>
 <p>Because your data lives only on your device, <strong>you are responsible for keeping a copy of it.</strong> Cents includes a Backup feature for exactly this reason. Your data may also be included in your own encrypted iPhone backup, which only you control.</p>
 <h2>The only two network calls</h2>
 <p>Cents makes exactly two kinds of network request, and nothing else:</p>
@@ -79,7 +78,8 @@
 <li><strong>Exchange rates.</strong> When you hold money in more than one currency, Cents asks a public exchange-rate service for today's rates. The request contains one thing: a currency code, such as <code>EGP</code>. It does not contain your balances, your transactions, your device identifier, or anything else about you. You can turn automatic rate updates off entirely in Settings and enter rates by hand.</li>
 <li><strong>Donations.</strong> If you choose to make a donation, the purchase is handled by Apple's In-App Purchase system. Cents never sees your payment details.</li>
 </ul>
-<p>There are no other requests. No crash reporting, no remote configuration, no feature flags, no update checks.</p>
+<p>There are no other requests. No crash reporting, no remote configuration, no feature flags, no update checks. In particular, reading a bank message and categorising it makes <strong>no</strong> network request at all.</p>
+<p>One thing in Cents can put data into a message that leaves your phone, and it is not a request Cents makes: <strong>Open in Mail</strong> on the Vendor categories screen opens a draft in your own Mail app, which you read and send yourself. It is described in full under *Vendor categories* below.</p>
 <h2>What Cents does not do</h2>
 <ul>
 <li><strong>No analytics.</strong> Cents does not measure what you tap, how long you use it, or what you record.</li>
@@ -92,6 +92,32 @@
 <h2>Donations</h2>
 <p>Donations are processed by Apple, not by the developer. Apple handles the payment and provides the developer with anonymous sales reports only — no name, no email address, no payment details, and no way to connect a donation to a person.</p>
 <p>Donations are a thank-you. They do not unlock features: every feature of Cents is free, for everyone, forever.</p>
+<h2>Reading bank messages</h2>
+<p>Cents can turn a bank's SMS about a card payment into a transaction. This is off until you turn it on, and it works differently from how people usually expect, so it is worth being exact.</p>
+<p><strong>Cents cannot read your messages.</strong> iOS gives no app access to the Messages app, Cents does not ask for such access, and there is no permission you could grant that would give it. Instead, <strong>you hand Cents one message at a time.</strong> You do that either by setting up an automation in Apple's Shortcuts app — which runs on your iPhone and passes the message text to Cents when it arrives — or by pasting a message into Settings yourself.</p>
+<p>When Cents receives a message:</p>
+<ul>
+<li>It is read <strong>on your device</strong>, by a fixed set of rules written into the app. You can see what those rules make of any message before you rely on them, using <strong>Try a message</strong> in Settings.</li>
+<li><strong>No artificial intelligence or language model is involved,</strong> on your device or anywhere else. Categorising a vendor is a lookup in a list, not a judgement by a model, which is why it works with no signal and why the message never needs to go anywhere.</li>
+<li><strong>The message itself is never stored.</strong> What is kept is the transaction it produced — amount, vendor, category, date — and a short fingerprint of the text, used only to notice the same message arriving twice so you are not charged twice in your own records. The fingerprint cannot be turned back into the message.</li>
+<li><strong>Nothing is transmitted.</strong> Capturing a transaction makes no network request of any kind.</li>
+</ul>
+<p>You can turn message capture off at any time in Settings, and doing so stops it immediately. Transactions already recorded stay, and you can delete them like any other.</p>
+<h2>Vendor categories</h2>
+<p>Cents keeps a list matching vendor names to categories — &quot;CARREFOUR goes to Groceries&quot; — so a captured transaction files itself. There are two parts to it:</p>
+<ul>
+<li><strong>The built-in list</strong> ships inside the app. It is the same for everyone, contains no information about you, and updates only when the app updates.</li>
+<li><strong>Your own list</strong> is stored on your device, is yours alone, and always overrides the built-in one. You can view, change and delete every entry in Settings › Vendor categories.</li>
+</ul>
+<h3>Sharing your list, if you choose to</h3>
+<p>That screen has one button that can send something off your device: <strong>Open in Mail</strong>. It is the only such button in Cents, and it works like this:</p>
+<ul>
+<li>It shows you exactly what would be sent, in full, before anything happens.</li>
+<li>It sends <strong>only vendor names and category names</strong> — for example <code>CARREFOUR = Groceries &gt; Supermarket</code>. No amounts, no dates, no transactions, no account or card details, no device or user identifier.</li>
+<li>It <strong>excludes any mapping that points at a category you created yourself.</strong> A category you named is about you; only categories Cents ships with are included.</li>
+<li>It opens a draft in <strong>your own Mail app</strong>, addressed to ${PRIVACY_CONTACT}. Cents does not send it. Nothing leaves your phone unless you read the draft and press send.</li>
+</ul>
+<p>The purpose is to improve the built-in list that ships to everyone. If you never press that button, nothing about your mappings ever leaves your device.</p>
 <h2>App Lock</h2>
 <p>If you turn App Lock on, Cents requires Face ID, Touch ID or your device passcode before showing your records.</p>
 <p><strong>Be clear about what this protects.</strong> App Lock hides the app's screens. It does not add encryption of its own. Your data is protected at rest by iOS device encryption, which applies whenever your iPhone is locked with a passcode. Anyone who can unlock your iPhone and knows your passcode can reach your data.</p>
@@ -103,7 +129,7 @@
 <p>Questions about privacy can go to ${PRIVACY_CONTACT}. Because there is no account and no data held about you, there is nothing for the developer to look up, correct or delete on your behalf — deleting the app, or using <strong>Erase all data</strong> in Settings, removes everything.</p>
 <footer>
 <a href="./">Support</a><a href="./privacy.html">Privacy</a><a href="./terms.html">Terms</a>
-<p>Cents is made by Ahmed Abolfadl. Questions: <a href="mailto:ahmedamrabolfadl1@gmail.com">ahmedamrabolfadl1@gmail.com</a></p>
+<p>Cents is made by Ahmed Abolfadl. Questions: <a href="mailto:aaabolfadl@gmail.com">aaabolfadl@gmail.com</a></p>
 </footer>
 </main>
 </body>
